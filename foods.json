@@ -4,7 +4,7 @@
     "title": "Bøf med grønne bønner og rodfrugter",
     "description": "Perfekt stegt bøf med smeltet urtesmør, serveret med ristede kartofler og rodfrugter samt grønne bønner med parmesan.",
     "date": "2025-12-30",
-    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/v1773246584/b%C3%B8f-jr-1_jwsd4u.heic",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773246584/b%C3%B8f-jr-1_jwsd4u.heic",
     "tags": ["Kød", "Kartoffler", "Fransk", "Julie's Restaurant"]
   },
   {
@@ -12,7 +12,7 @@
     "title": "Pho med Lam",
     "description": "Hjemmelavet pho med mørt, trukket lam i en klar suppe. Toppet med friske krydderurter, bønnespirer, forårsløg og et skvis lime.",
     "date": "2026-01-10",
-    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/v1773246584/pho-lam_lyr93c.heic",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773246584/pho-lam_lyr93c.heic",
     "tags": ["pho", "lam", "vietnamesisk", "suppe"]
   },
   {
@@ -20,7 +20,7 @@
     "title": "Focaccia Sandwich med Marineret Kylling",
     "description": "Hjemmebagt focaccia fyldt med saftig marineret kylling, rucola, burrata og rød pesto",
     "date": "2026-03-04",
-    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/v1773246585/hm-foccacia-kylling_gdc5vm.heic",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773246585/hm-foccacia-kylling_gdc5vm.heic",
     "tags": ["sandwich", "kylling", "focaccia"]
   },
   {
@@ -28,39 +28,7 @@
     "title": "Fisketacos med mango salsa",
     "description": "Tacos med sprød fisk og hjemmelavet mango salsa. Friske lime-både på siden.",
     "date": "2026-03-09",
-    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/v1773246584/fisketacos_aybqve.heic",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773246584/fisketacos_aybqve.heic",
     "tags": ["tacos", "fisk", "mango", "mexicansk"]
-  },
-  {
-    "id": 5,
-    "title": "Ramen from Scratch",
-    "description": "12-hour broth. I'm not exaggerating. The chashu pork melted in my mouth and the soft-boiled eggs were perfectly marinated.",
-    "date": "2026-02-07",
-    "image": "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
-    "tags": ["japanese", "soup", "ramen"]
-  },
-  {
-    "id": 6,
-    "title": "Roasted Tomato Soup",
-    "description": "A cold rainy evening and she showed up with this. Served with sourdough croutons she toasted herself.",
-    "date": "2026-01-29",
-    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80",
-    "tags": ["soup", "comfort food", "winter"]
-  },
-  {
-    "id": 7,
-    "title": "Chocolate Fondant",
-    "description": "She nailed the timing perfectly — still molten in the center. Served with vanilla bean ice cream.",
-    "date": "2026-01-18",
-    "image": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800&q=80",
-    "tags": ["dessert", "chocolate", "baking"]
-  },
-  {
-    "id": 8,
-    "title": "Poke Bowl",
-    "description": "Fresh ahi tuna, mango, edamame, pickled cucumber. Ate this in about 4 minutes flat.",
-    "date": "2026-01-10",
-    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
-    "tags": ["healthy", "japanese", "fresh"]
   }
 ]
