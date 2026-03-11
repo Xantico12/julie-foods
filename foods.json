@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "title": "Homemade Pasta Carbonara",
+    "description": "Made this from scratch after a long week — the pasta was hand-rolled and everything. Honestly the best carbonara I've ever had.",
+    "date": "2026-03-08",
+    "image": "https://images.unsplash.com/photo-1612874742237-6526221588e3?w=800&q=80",
+    "tags": ["pasta", "italian", "comfort food"]
+  },
+  {
+    "id": 2,
+    "title": "Mango Sticky Rice",
+    "description": "Surprised me with this after I mentioned I'd never tried it. The coconut cream was homemade.",
+    "date": "2026-03-02",
+    "image": "https://images.unsplash.com/photo-1488477181946-6428a0291777?w=800&q=80",
+    "tags": ["dessert", "thai", "sweet"]
+  },
+  {
+    "id": 3,
+    "title": "Sunday Shakshuka",
+    "description": "Lazy Sunday breakfast. Spiced just right with harissa and feta on top. We ate it straight from the pan.",
+    "date": "2026-02-23",
+    "image": "https://images.unsplash.com/photo-1590412200988-a436970781fa?w=800&q=80",
+    "tags": ["breakfast", "eggs", "spicy"]
+  },
+  {
+    "id": 4,
+    "title": "Lemon Tart",
+    "description": "She spent the whole afternoon on this. The crust was buttery and the filling had the perfect tartness.",
+    "date": "2026-02-14",
+    "image": "https://images.unsplash.com/photo-1519915028121-7d3463d20b13?w=800&q=80",
+    "tags": ["dessert", "baking", "valentines"]
+  },
+  {
+    "id": 5,
+    "title": "Ramen from Scratch",
+    "description": "12-hour broth. I'm not exaggerating. The chashu pork melted in my mouth and the soft-boiled eggs were perfectly marinated.",
+    "date": "2026-02-07",
+    "image": "https://images.unsplash.com/photo-1569050467447-ce54b3bbc37d?w=800&q=80",
+    "tags": ["japanese", "soup", "ramen"]
+  },
+  {
+    "id": 6,
+    "title": "Roasted Tomato Soup",
+    "description": "A cold rainy evening and she showed up with this. Served with sourdough croutons she toasted herself.",
+    "date": "2026-01-29",
+    "image": "https://images.unsplash.com/photo-1547592166-23ac45744acd?w=800&q=80",
+    "tags": ["soup", "comfort food", "winter"]
+  },
+  {
+    "id": 7,
+    "title": "Chocolate Fondant",
+    "description": "She nailed the timing perfectly — still molten in the center. Served with vanilla bean ice cream.",
+    "date": "2026-01-18",
+    "image": "https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=800&q=80",
+    "tags": ["dessert", "chocolate", "baking"]
+  },
+  {
+    "id": 8,
+    "title": "Poke Bowl",
+    "description": "Fresh ahi tuna, mango, edamame, pickled cucumber. Ate this in about 4 minutes flat.",
+    "date": "2026-01-10",
+    "image": "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=800&q=80",
+    "tags": ["healthy", "japanese", "fresh"]
+  }
+]

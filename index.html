@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>She Fed Me</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --pink: #f4a7b9;
+      --pink-light: #fde8ee;
+      --pink-deep: #e07d95;
+      --ink: #1a1a1a;
+      --ink-soft: #5c5c5c;
+      --ink-faint: #aaaaaa;
+      --surface: #fdfaf9;
+      --card-bg: #ffffff;
+      --border: #f0e8e6;
+      --radius: 4px;
+      --transition: 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background: var(--surface);
+      color: var(--ink);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(253, 250, 249, 0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      padding: 0 clamp(1.5rem, 5vw, 4rem);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 64px;
+    }
+
+    .logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.6rem;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      color: var(--ink);
+      display: flex;
+      align-items: baseline;
+      gap: 0.2em;
+    }
+
+    .logo span {
+      color: var(--pink-deep);
+      font-style: italic;
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .view-toggle {
+      display: flex;
+      background: var(--pink-light);
+      border-radius: 8px;
+      padding: 3px;
+      gap: 2px;
+    }
+
+    .view-btn {
+      background: none;
+      border: none;
+      padding: 6px 10px;
+      border-radius: 6px;
+      cursor: pointer;
+      color: var(--ink-faint);
+      transition: var(--transition);
+      display: flex;
+      align-items: center;
+    }
+
+    .view-btn.active {
+      background: white;
+      color: var(--pink-deep);
+      box-shadow: 0 1px 4px rgba(0,0,0,0.08);
+    }
+
+    .view-btn svg { display: block; }
+
+    /* ── HERO ── */
+    .hero {
+      padding: clamp(3rem, 8vw, 6rem) clamp(1.5rem, 5vw, 4rem) clamp(2rem, 5vw, 3.5rem);
+      max-width: 640px;
+    }
+
+    .hero-label {
+      font-size: 0.7rem;
+      font-weight: 500;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--pink-deep);
+      margin-bottom: 1rem;
+    }
+
+    .hero h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 6vw, 4.5rem);
+      font-weight: 300;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      color: var(--ink);
+      margin-bottom: 1.2rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      color: var(--pink-deep);
+    }
+
+    .hero p {
+      font-size: 0.95rem;
+      color: var(--ink-soft);
+      line-height: 1.7;
+      font-weight: 300;
+    }
+
+    .count-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4em;
+      margin-top: 1.5rem;
+      background: var(--pink-light);
+      color: var(--pink-deep);
+      padding: 0.35em 0.85em;
+      border-radius: 99px;
+      font-size: 0.78rem;
+      font-weight: 500;
+    }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      padding: 0 clamp(1.5rem, 5vw, 4rem) 6rem;
+    }
+
+    /* ── PINTEREST GRID ── */
+    #grid-view {
+      columns: 1;
+      column-gap: 1.25rem;
+    }
+
+    @media (min-width: 540px) { #grid-view { columns: 2; } }
+    @media (min-width: 900px) { #grid-view { columns: 3; } }
+    @media (min-width: 1200px) { #grid-view { columns: 4; } }
+
+    .grid-card {
+      break-inside: avoid;
+      margin-bottom: 1.25rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: var(--transition);
+      opacity: 0;
+      transform: translateY(16px);
+      animation: fadeUp 0.5s forwards;
+    }
+
+    .grid-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 40px rgba(224, 125, 149, 0.15), 0 2px 8px rgba(0,0,0,0.06);
+      border-color: var(--pink);
+    }
+
+    .grid-card img {
+      width: 100%;
+      display: block;
+      object-fit: cover;
+    }
+
+    .grid-card-body {
+      padding: 1rem 1.1rem 1.1rem;
+    }
+
+    .card-date {
+      font-size: 0.68rem;
+      color: var(--pink-deep);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      margin-bottom: 0.35rem;
+    }
+
+    .card-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1.2;
+      margin-bottom: 0.45rem;
+      color: var(--ink);
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--ink-soft);
+      line-height: 1.6;
+      font-weight: 300;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-tags {
+      margin-top: 0.75rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.35rem;
+    }
+
+    .tag {
+      font-size: 0.65rem;
+      padding: 0.2em 0.6em;
+      background: var(--pink-light);
+      color: var(--pink-deep);
+      border-radius: 99px;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+    }
+
+    /* ── TIMELINE VIEW ── */
+    #timeline-view {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    .timeline-year {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 0.8rem;
+      font-weight: 400;
+      color: var(--ink-faint);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 2rem 0 1rem 3rem;
+      position: relative;
+    }
+
+    .timeline-year::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 50%;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--pink);
+    }
+
+    .timeline-item {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 1.5rem;
+      padding: 0 0 2rem 0;
+      position: relative;
+      opacity: 0;
+      transform: translateX(-12px);
+      animation: fadeIn 0.5s forwards;
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 1px;
+      background: linear-gradient(to bottom, var(--pink-light), transparent);
+    }
+
+    .timeline-date-col {
+      text-align: right;
+      padding-top: 0.25rem;
+      position: relative;
+    }
+
+    .timeline-date-col::after {
+      content: '';
+      position: absolute;
+      right: -1.5rem;
+      top: 0.5rem;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--pink-deep);
+      border: 2px solid var(--surface);
+      box-shadow: 0 0 0 1px var(--pink);
+    }
+
+    .timeline-day {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.8rem;
+      font-weight: 300;
+      line-height: 1;
+      color: var(--ink);
+    }
+
+    .timeline-month {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--ink-faint);
+      margin-top: 0.15rem;
+    }
+
+    .timeline-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      overflow: hidden;
+      cursor: pointer;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    @media (min-width: 540px) {
+      .timeline-card { flex-direction: row; }
+      .timeline-card img { width: 180px; flex-shrink: 0; }
+    }
+
+    .timeline-card:hover {
+      box-shadow: 0 8px 32px rgba(224, 125, 149, 0.12), 0 2px 8px rgba(0,0,0,0.05);
+      border-color: var(--pink);
+    }
+
+    .timeline-card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (min-width: 540px) {
+      .timeline-card img { height: auto; }
+    }
+
+    .timeline-card-body {
+      padding: 1.1rem 1.2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    /* ── MODAL ── */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(26, 26, 26, 0.7);
+      backdrop-filter: blur(6px);
+      z-index: 200;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.3s;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    .modal {
+      background: var(--card-bg);
+      border-radius: 16px;
+      max-width: 700px;
+      width: 100%;
+      max-height: 90vh;
+      overflow: hidden;
+      display: grid;
+      grid-template-rows: auto 1fr;
+      transform: scale(0.96) translateY(8px);
+      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    }
+
+    .modal-overlay.open .modal {
+      transform: scale(1) translateY(0);
+    }
+
+    .modal img {
+      width: 100%;
+      max-height: 55vh;
+      object-fit: cover;
+      display: block;
+    }
+
+    .modal-body {
+      padding: 1.8rem 2rem 2rem;
+      overflow-y: auto;
+    }
+
+    .modal-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.75rem;
+    }
+
+    .modal-date {
+      font-size: 0.72rem;
+      color: var(--pink-deep);
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .modal-close {
+      background: var(--pink-light);
+      border: none;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      cursor: pointer;
+      color: var(--pink-deep);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: var(--transition);
+    }
+
+    .modal-close:hover { background: var(--pink); color: white; }
+
+    .modal-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.1;
+      margin-bottom: 0.9rem;
+    }
+
+    .modal-desc {
+      font-size: 0.92rem;
+      color: var(--ink-soft);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    .modal-tags {
+      margin-top: 1.2rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    /* ── EMPTY STATE ── */
+    .empty {
+      text-align: center;
+      padding: 5rem 2rem;
+      color: var(--ink-faint);
+    }
+
+    .empty-icon { font-size: 3rem; margin-bottom: 1rem; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; transform: translateX(0); }
+    }
+
+    /* stagger delays */
+    .grid-card:nth-child(1) { animation-delay: 0.05s; }
+    .grid-card:nth-child(2) { animation-delay: 0.1s; }
+    .grid-card:nth-child(3) { animation-delay: 0.15s; }
+    .grid-card:nth-child(4) { animation-delay: 0.2s; }
+    .grid-card:nth-child(5) { animation-delay: 0.25s; }
+    .grid-card:nth-child(6) { animation-delay: 0.3s; }
+    .grid-card:nth-child(7) { animation-delay: 0.35s; }
+    .grid-card:nth-child(8) { animation-delay: 0.4s; }
+
+    .timeline-item:nth-child(1) { animation-delay: 0.05s; }
+    .timeline-item:nth-child(2) { animation-delay: 0.12s; }
+    .timeline-item:nth-child(3) { animation-delay: 0.19s; }
+    .timeline-item:nth-child(4) { animation-delay: 0.26s; }
+    .timeline-item:nth-child(5) { animation-delay: 0.33s; }
+    .timeline-item:nth-child(6) { animation-delay: 0.40s; }
+    .timeline-item:nth-child(7) { animation-delay: 0.47s; }
+    .timeline-item:nth-child(8) { animation-delay: 0.54s; }
+
+    /* ── HIDDEN ── */
+    .hidden { display: none !important; }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="logo">She <span>Fed</span> Me</div>
+    <div class="header-controls">
+      <div class="view-toggle">
+        <button class="view-btn active" id="btn-grid" onclick="setView('grid')" title="Grid view">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/>
+            <rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/>
+          </svg>
+        </button>
+        <button class="view-btn" id="btn-timeline" onclick="setView('timeline')" title="Timeline view">
+          <svg width="16" height="16" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+            <line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/>
+            <line x1="8" y1="18" x2="21" y2="18"/>
+            <circle cx="3" cy="6" r="1.5" fill="currentColor" stroke="none"/>
+            <circle cx="3" cy="12" r="1.5" fill="currentColor" stroke="none"/>
+            <circle cx="3" cy="18" r="1.5" fill="currentColor" stroke="none"/>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="hero-label">A personal archive</div>
+    <h1>Every meal she's<br>made me <em>with love</em></h1>
+    <p>A living journal of the dishes, the evenings, and the care that goes into every plate.</p>
+    <div class="count-badge" id="count-badge">
+      <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+      <span id="count-text">Loading…</span>
+    </div>
+  </section>
+
+  <main>
+    <div id="grid-view"></div>
+    <div id="timeline-view" class="hidden"></div>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-overlay" id="modal" onclick="closeModal(event)">
+    <div class="modal" id="modal-inner">
+      <img id="modal-img" src="" alt=""/>
+      <div class="modal-body">
+        <div class="modal-meta">
+          <div class="modal-date" id="modal-date"></div>
+          <button class="modal-close" onclick="closeModalDirect()">✕</button>
+        </div>
+        <div class="modal-title" id="modal-title"></div>
+        <div class="modal-desc" id="modal-desc"></div>
+        <div class="modal-tags" id="modal-tags"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let foods = [];
+    let currentView = 'grid';
+
+    const MONTHS = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+    const MONTHS_FULL = ['January','February','March','April','May','June','July','August','September','October','November','December'];
+
+    function formatDate(str) {
+      const d = new Date(str + 'T00:00:00');
+      return `${MONTHS[d.getMonth()]} ${d.getDate()}, ${d.getFullYear()}`;
+    }
+
+    function parseDate(str) {
+      return new Date(str + 'T00:00:00');
+    }
+
+    async function loadFoods() {
+      try {
+        const r = await fetch('foods.json');
+        foods = await r.json();
+        foods.sort((a, b) => parseDate(b.date) - parseDate(a.date));
+        document.getElementById('count-text').textContent = `${foods.length} meals and counting`;
+        renderGrid();
+        renderTimeline();
+      } catch(e) {
+        document.getElementById('grid-view').innerHTML = `<div class="empty"><div class="empty-icon">🍽️</div><p>No meals found yet.</p></div>`;
+      }
+    }
+
+    function renderGrid() {
+      const container = document.getElementById('grid-view');
+      if (!foods.length) { container.innerHTML = `<div class="empty"><div class="empty-icon">🍽️</div><p>No meals yet!</p></div>`; return; }
+      container.innerHTML = foods.map((f, i) => `
+        <div class="grid-card" onclick="openModal(${f.id})">
+          <img src="${f.image}" alt="${f.title}" loading="lazy"/>
+          <div class="grid-card-body">
+            <div class="card-date">${formatDate(f.date)}</div>
+            <div class="card-title">${f.title}</div>
+            <div class="card-desc">${f.description}</div>
+            ${f.tags?.length ? `<div class="card-tags">${f.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>` : ''}
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function renderTimeline() {
+      const container = document.getElementById('timeline-view');
+      if (!foods.length) { container.innerHTML = `<div class="empty"><div class="empty-icon">🍽️</div><p>No meals yet!</p></div>`; return; }
+
+      // Group by year-month
+      const groups = {};
+      foods.forEach(f => {
+        const d = parseDate(f.date);
+        const key = d.getFullYear();
+        if (!groups[key]) groups[key] = [];
+        groups[key].push(f);
+      });
+
+      let html = '';
+      Object.keys(groups).sort((a,b) => b - a).forEach(year => {
+        html += `<div class="timeline-year">${year}</div>`;
+        groups[year].forEach((f, i) => {
+          const d = parseDate(f.date);
+          html += `
+            <div class="timeline-item">
+              <div class="timeline-date-col">
+                <div class="timeline-day">${d.getDate()}</div>
+                <div class="timeline-month">${MONTHS[d.getMonth()]}</div>
+              </div>
+              <div class="timeline-card" onclick="openModal(${f.id})">
+                <img src="${f.image}" alt="${f.title}" loading="lazy"/>
+                <div class="timeline-card-body">
+                  <div class="card-date">${formatDate(f.date)}</div>
+                  <div class="card-title">${f.title}</div>
+                  <div class="card-desc">${f.description}</div>
+                  ${f.tags?.length ? `<div class="card-tags">${f.tags.map(t=>`<span class="tag">${t}</span>`).join('')}</div>` : ''}
+                </div>
+              </div>
+            </div>
+          `;
+        });
+      });
+
+      container.innerHTML = html;
+    }
+
+    function setView(view) {
+      currentView = view;
+      document.getElementById('grid-view').classList.toggle('hidden', view !== 'grid');
+      document.getElementById('timeline-view').classList.toggle('hidden', view !== 'timeline');
+      document.getElementById('btn-grid').classList.toggle('active', view === 'grid');
+      document.getElementById('btn-timeline').classList.toggle('active', view === 'timeline');
+    }
+
+    function openModal(id) {
+      const f = foods.find(x => x.id === id);
+      if (!f) return;
+      document.getElementById('modal-img').src = f.image;
+      document.getElementById('modal-img').alt = f.title;
+      document.getElementById('modal-date').textContent = formatDate(f.date);
+      document.getElementById('modal-title').textContent = f.title;
+      document.getElementById('modal-desc').textContent = f.description;
+      document.getElementById('modal-tags').innerHTML = (f.tags||[]).map(t=>`<span class="tag">${t}</span>`).join('');
+      document.getElementById('modal').classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeModal(e) {
+      if (e.target === document.getElementById('modal')) closeModalDirect();
+    }
+
+    function closeModalDirect() {
+      document.getElementById('modal').classList.remove('open');
+      document.body.style.overflow = '';
+    }
+
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModalDirect(); });
+
+    loadFoods();
+  </script>
+</body>
+</html>
