@@ -38,5 +38,13 @@
     "date": "2026-03-11",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773253992/hm-ramen_at1t6k.heic",
     "tags": ["ramen", "ribbensteg", "japansk"]
+  },
+  {
+    "id": 6,
+    "title": "Birria Tacos",
+    "description": "En af de første gange vi var sammen lavede Julie birria tacos — og brugte et helt døgn på dem! Mørt birria-kød, pico de gallo, guacamole og frisk koriander i tortillaen, serveret med consommé og lime til at dyppe i.",
+    "date": "2025-11-18",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773602926/julie-foods/birria-tacos.jpg",
+    "tags": ["tacos", "birria", "mexicansk", "oksekød"]
   }
 ]
