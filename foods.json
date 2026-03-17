@@ -54,5 +54,13 @@
     "date": "2026-03-17",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773756699/julie-foods/kylling-sandwich.jpg",
     "tags": ["sandwich", "kylling", "kebab"]
+  },
+  {
+    "id": 8,
+    "title": "Thai Rød Karry",
+    "description": "Fyldig thai rød karry med kyllingelår, bambusskud, rød peber og løg i en rig kokosmælkssauce. Serveret med luftig hvid ris toppet med forårsløg, hakkede peanuts, frisk chili og en skive lime.",
+    "date": "2026-03-17",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773773545/julie-foods/thai-red-curry.jpg",
+    "tags": ["karry", "kylling", "thai", "ris"]
   }
 ]
