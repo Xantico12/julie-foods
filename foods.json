@@ -46,5 +46,13 @@
     "date": "2025-11-18",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773602926/julie-foods/birria-tacos.jpg",
     "tags": ["tacos", "birria", "mexicansk", "oksekød"]
+  },
+  {
+    "id": 7,
+    "title": "Krydret Kylling Sandwich",
+    "description": "Sandwich med krydret kylling, pikant flødeost og kebabdressing, toppet med hvidkål, tomater og røde løg — serveret i et sprødt rundstykke.",
+    "date": "2026-03-17",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773756699/julie-foods/kylling-sandwich.jpg",
+    "tags": ["sandwich", "kylling", "kebab"]
   }
 ]
