@@ -62,5 +62,21 @@
     "date": "2026-03-17",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773773545/julie-foods/thai-red-curry.jpg",
     "tags": ["karry", "kylling", "thai", "ris"]
+  },
+  {
+    "id": 9,
+    "title": "Hjemmelavet Sushi (foto A)",
+    "description": "Julie og jeg lavede sushi sammen! Fire slags ruller: to uramaki med tempura rejer — én toppet med brændt laks og chili mayo, én med avocado — og to futomaki med henholdsvis spicy laks og tempura rejer. Alle ruller med agurk og avocado indeni, toppet med teriyaki og sriracha.",
+    "date": "2026-03-20",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1774041343/julie-foods/sushi-1.jpg",
+    "tags": ["sushi", "laks", "rejer", "japansk"]
+  },
+  {
+    "id": 10,
+    "title": "Hjemmelavet Sushi (foto B)",
+    "description": "Julie og jeg lavede sushi sammen! Fire slags ruller: to uramaki med tempura rejer — én toppet med brændt laks og chili mayo, én med avocado — og to futomaki med henholdsvis spicy laks og tempura rejer. Alle ruller med agurk og avocado indeni, toppet med teriyaki og sriracha.",
+    "date": "2026-03-20",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1774041343/julie-foods/sushi-2.jpg",
+    "tags": ["sushi", "laks", "rejer", "japansk"]
   }
 ]
