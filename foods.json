@@ -70,5 +70,13 @@
     "date": "2026-03-20",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1774041343/julie-foods/sushi-2.jpg",
     "tags": ["sushi", "laks", "rejer", "japansk"]
+  },
+  {
+    "id": 10,
+    "title": "Salsicca Pasta",
+    "description": "Rigatoni med salsicca i en rig tomatsauce med fløde, parmesan og spinat — toppet med frisk chili og masser af revet parmesan.",
+    "date": "2026-03-25",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1774616753/julie-foods/salsicca-pasta.jpg",
+    "tags": ["pasta", "salsicca", "italiensk", "rigatoni"]
   }
 ]
