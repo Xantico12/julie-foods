@@ -49,14 +49,6 @@
   },
   {
     "id": 7,
-    "title": "Krydret Kylling Sandwich",
-    "description": "Sandwich med krydret kylling, pikant flødeost og kebabdressing, toppet med hvidkål, tomater og røde løg — serveret i et sprødt rundstykke.",
-    "date": "2026-03-17",
-    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773756699/julie-foods/kylling-sandwich.jpg",
-    "tags": ["sandwich", "kylling", "kebab"]
-  },
-  {
-    "id": 8,
     "title": "Thai Rød Karry",
     "description": "Fyldig thai rød karry med kyllingelår, bambusskud, rød peber og løg i en rig kokosmælkssauce. Serveret med luftig hvid ris toppet med forårsløg, hakkede peanuts, frisk chili og en skive lime.",
     "date": "2026-03-17",
@@ -64,7 +56,7 @@
     "tags": ["karry", "kylling", "thai", "ris"]
   },
   {
-    "id": 9,
+    "id": 8,
     "title": "Hjemmelavet Sushi",
     "description": "Julie og jeg lavede sushi sammen! Fire slags ruller: to uramaki med tempura rejer — én toppet med brændt laks og chili mayo, én med avocado — og to futomaki med henholdsvis spicy laks og tempura rejer. Alle ruller med agurk og avocado indeni, toppet med teriyaki og sriracha.",
     "date": "2026-03-20",
@@ -72,7 +64,7 @@
     "tags": ["sushi", "laks", "rejer", "japansk"]
   },
   {
-    "id": 10,
+    "id": 9,
     "title": "Salsicca Pasta",
     "description": "Rigatoni med salsicca i en rig tomatsauce med fløde, parmesan og spinat — toppet med frisk chili og masser af revet parmesan.",
     "date": "2026-03-25",
