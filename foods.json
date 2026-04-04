@@ -78,5 +78,13 @@
     "date": "2025-08-31",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1775343082/julie-foods/himmerland-sandwich.jpg",
     "tags": ["sandwich", "kylling", "picnic", "særlig dag"]
+  },
+  {
+    "id": 11,
+    "title": "Black Magic Cake",
+    "description": "Julie bagte en Black Magic Cake til besøg hos Xanders forældre på Fyn — en dyb, fløjlsblød chokoladekage toppet med silkeblød chokolademousse, friske jordbær, hindbær og blåbær, Toffifee og Kinder Bueno. Serveret i et hyggeligt sommerhus i Frørup.",
+    "date": "2026-04-03",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1775343517/julie-foods/black-magic-cake.jpg",
+    "tags": ["kage", "chokolade", "dessert", "bær"]
   }
 ]
