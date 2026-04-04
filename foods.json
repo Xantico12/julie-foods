@@ -5,7 +5,12 @@
     "description": "Perfekt stegt bøf med smeltet urtesmør, serveret med ristede kartofler og rodfrugter samt grønne bønner med parmesan.",
     "date": "2025-12-30",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773246584/b%C3%B8f-jr-1_jwsd4u.heic",
-    "tags": ["Kød", "Kartoffler", "Fransk", "Julie's Restaurant"]
+    "tags": [
+      "Kød",
+      "Kartoffler",
+      "Fransk",
+      "Julie's Restaurant"
+    ]
   },
   {
     "id": 2,
@@ -13,7 +18,12 @@
     "description": "Hjemmelavet pho med mørt, trukket and i en klar suppe. Toppet med friske krydderurter, bønnespirer, forårsløg og et skvis lime.",
     "date": "2026-01-10",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1774617386/julie-foods/pho-v2.jpg",
-    "tags": ["pho", "and", "vietnamesisk", "suppe"]
+    "tags": [
+      "pho",
+      "and",
+      "vietnamesisk",
+      "suppe"
+    ]
   },
   {
     "id": 3,
@@ -21,7 +31,11 @@
     "description": "Hjemmebagt focaccia fyldt med saftig marineret kylling, rucola, burrata og rød pesto",
     "date": "2026-03-04",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773246585/hm-foccacia-kylling_gdc5vm.heic",
-    "tags": ["sandwich", "kylling", "focaccia"]
+    "tags": [
+      "sandwich",
+      "kylling",
+      "focaccia"
+    ]
   },
   {
     "id": 4,
@@ -29,7 +43,12 @@
     "description": "Tacos med sprød fisk og hjemmelavet mango salsa. Friske lime-både på siden.",
     "date": "2026-03-09",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773246584/fisketacos_aybqve.heic",
-    "tags": ["tacos", "fisk", "mango", "mexicansk"]
+    "tags": [
+      "tacos",
+      "fisk",
+      "mango",
+      "mexicansk"
+    ]
   },
   {
     "id": 5,
@@ -37,7 +56,11 @@
     "description": "Lækker hjemmelavet tonkotsu ramen med seaweed, forårsløg, soyamarineret æg, char siu",
     "date": "2026-03-11",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1774617386/julie-foods/ramen-v2.jpg",
-    "tags": ["ramen", "ribbensteg", "japansk"]
+    "tags": [
+      "ramen",
+      "ribbensteg",
+      "japansk"
+    ]
   },
   {
     "id": 6,
@@ -45,7 +68,12 @@
     "description": "En af de første gange vi var sammen lavede Julie birria tacos — og brugte et helt døgn på dem! Mørt birria-kød, pico de gallo, guacamole og frisk koriander i tortillaen, serveret med consommé og lime til at dyppe i.",
     "date": "2025-11-18",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773602926/julie-foods/birria-tacos.jpg",
-    "tags": ["tacos", "birria", "mexicansk", "oksekød"]
+    "tags": [
+      "tacos",
+      "birria",
+      "mexicansk",
+      "oksekød"
+    ]
   },
   {
     "id": 7,
@@ -53,7 +81,12 @@
     "description": "Fyldig thai rød karry med kyllingelår, bambusskud, rød peber og løg i en rig kokosmælkssauce. Serveret med luftig hvid ris toppet med forårsløg, hakkede peanuts, frisk chili og en skive lime.",
     "date": "2026-03-17",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1773773545/julie-foods/thai-red-curry.jpg",
-    "tags": ["karry", "kylling", "thai", "ris"]
+    "tags": [
+      "karry",
+      "kylling",
+      "thai",
+      "ris"
+    ]
   },
   {
     "id": 8,
@@ -61,7 +94,12 @@
     "description": "Julie og jeg lavede sushi sammen! Fire slags ruller: to uramaki med tempura rejer — én toppet med brændt laks og chili mayo, én med avocado — og to futomaki med henholdsvis spicy laks og tempura rejer. Alle ruller med agurk og avocado indeni, toppet med teriyaki og sriracha.",
     "date": "2026-03-20",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1774041343/julie-foods/sushi-2.jpg",
-    "tags": ["sushi", "laks", "rejer", "japansk"]
+    "tags": [
+      "sushi",
+      "laks",
+      "rejer",
+      "japansk"
+    ]
   },
   {
     "id": 9,
@@ -69,15 +107,25 @@
     "description": "Rigatoni med salsicca i en rig tomatsauce med fløde, parmesan og spinat — toppet med frisk chili og masser af revet parmesan.",
     "date": "2026-03-25",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1774616753/julie-foods/salsicca-pasta.jpg",
-    "tags": ["pasta", "salsicca", "italiensk", "rigatoni"]
+    "tags": [
+      "pasta",
+      "salsicca",
+      "italiensk",
+      "rigatoni"
+    ]
   },
   {
     "id": 10,
     "title": "Kyllingesandwich på Badebro",
     "description": "Den dag jeg spurgte Julie om hun ville være min kæreste ved en badebro i Himmerland — og hun sagde ja! Bagefter spiste vi den sandwich hun havde pakket med: kylling, aioli, rucola og soltørrede tomater i et blødt madbrød. Perfekt dag, perfekt sandwich. ❤️",
-    "date": "2025-08-31",
+    "date": "2026-03-31",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1775343082/julie-foods/himmerland-sandwich.jpg",
-    "tags": ["sandwich", "kylling", "picnic", "særlig dag"]
+    "tags": [
+      "sandwich",
+      "kylling",
+      "picnic",
+      "særlig dag"
+    ]
   },
   {
     "id": 11,
@@ -85,6 +133,11 @@
     "description": "Julie bagte en Black Magic Cake til besøg hos Xanders forældre på Fyn — en dyb, fløjlsblød chokoladekage toppet med silkeblød chokolademousse, friske jordbær, hindbær og blåbær, Toffifee og Kinder Bueno. Serveret i et hyggeligt sommerhus i Frørup.",
     "date": "2026-04-03",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1775343517/julie-foods/black-magic-cake.jpg",
-    "tags": ["kage", "chokolade", "dessert", "bær"]
+    "tags": [
+      "kage",
+      "chokolade",
+      "dessert",
+      "bær"
+    ]
   }
 ]
