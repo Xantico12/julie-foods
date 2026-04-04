@@ -70,5 +70,13 @@
     "date": "2026-03-25",
     "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1774616753/julie-foods/salsicca-pasta.jpg",
     "tags": ["pasta", "salsicca", "italiensk", "rigatoni"]
+  },
+  {
+    "id": 10,
+    "title": "Kyllingesandwich på Badebro",
+    "description": "Den dag jeg spurgte Julie om hun ville være min kæreste ved en badebro i Himmerland — og hun sagde ja! Bagefter spiste vi den sandwich hun havde pakket med: kylling, aioli, rucola og soltørrede tomater i et blødt madbrød. Perfekt dag, perfekt sandwich. ❤️",
+    "date": "2025-08-31",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1775343082/julie-foods/himmerland-sandwich.jpg",
+    "tags": ["sandwich", "kylling", "picnic", "særlig dag"]
   }
 ]
