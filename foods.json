@@ -152,5 +152,19 @@
       "vietnamesisk",
       "flæsk"
     ]
+  },
+  {
+    "id": 13,
+    "title": "Thai Karry Rice Bowl",
+    "description": "Ris bowl med krydret thai karry-kylling, syltede grøntsager, hakkede peanuts, frisk koriander, chili mayo, teriyaki og friske chillier — afsluttet med et squeeze lime.",
+    "date": "2026-04-09",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1775744437/julie-foods/thai-curry-rice-bowl.jpg",
+    "tags": [
+      "bowl",
+      "ris",
+      "kylling",
+      "thai",
+      "karry"
+    ]
   }
 ]
