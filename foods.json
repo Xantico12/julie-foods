@@ -139,5 +139,18 @@
       "dessert",
       "bær"
     ]
+  },
+  {
+    "id": 12,
+    "title": "Bánh Mì med Sprød Flæsk",
+    "description": "Sprød vietnamesisk bánh mì med crispy flæsk, paté og yuzu mayo, toppet med syltede grøntsager, hoisin, frisk koriander, forårsløg, chili og lime.",
+    "date": "2026-04-08",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1775744214/julie-foods/banh-mi.jpg",
+    "tags": [
+      "bánh mì",
+      "sandwich",
+      "vietnamesisk",
+      "flæsk"
+    ]
   }
 ]
