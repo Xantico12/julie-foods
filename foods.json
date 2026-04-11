@@ -166,5 +166,18 @@
       "thai",
       "karry"
     ]
+  },
+  {
+    "id": 14,
+    "title": "Svinemørbrad med Bearnaise",
+    "description": "Artiskok og hvidløgsmarineret svinemørbrad serveret med crispy krydrede kartofler drysset med parmesan. På siden grillede asparges med citron og en silkeblød bearnaisesauce.",
+    "date": "2026-04-10",
+    "image": "https://res.cloudinary.com/dxvhphn8q/image/upload/f_auto,q_auto/v1775894470/julie-foods/svinemorbrad-bearnaise.jpg",
+    "tags": [
+      "svinemørbrad",
+      "bearnaise",
+      "asparges",
+      "kartofler"
+    ]
   }
 ]
